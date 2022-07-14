@@ -2,27 +2,27 @@
 //from user and display the sum of that numbers using loop.
 
 
-package loops;
+package loops; //package name	
 
 import java.util.Scanner;
 
 public class sum_of_even
   {
 
-	public static void main(String args[]) {
-		sum_of_even obj=new sum_of_even();
-		obj.Even_sum();
+	public static void main(String args[]) {//main method
+		sum_of_even obj=new sum_of_even();//create object for calling methods
+		obj.Even_sum();//call the method
 	}
 	
-	public void Even_sum() 
+	public void Even_sum() //create new method
 	{
-	      int num ,sum=0,i,res;
-		 Scanner sc =new Scanner(System.in);
-		 System.out.println(" Enter the Even number: ");
+	      int num ,sum=0,i,res;//variable declared
+		 Scanner sc =new Scanner(System.in); //scanner 
+		 System.out.println(" Enter the Even number: "); 
 		 num=sc.nextInt();
 		
-		 if(num%2==0) { 
-			do 
+		 if(num%2==0) { //using if statment
+			do  //using loop
 			{
 				res=num%10;  
 				sum=sum+res;  
