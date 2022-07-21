@@ -1,0 +1,31 @@
+package Encapsulation;
+
+public class account {
+	//declared varaibles and datatype
+	char count='y',ans;
+	long w,d,acc;
+	int type,select;
+	String user_name,name;
+	private int pin;
+	private long bal=5000;
+	
+	//create geter and seter method for private varaible
+	public int getPin() {
+		return pin;
+	}
+
+	public void setPin(int pin) {
+		this.pin = pin;
+	}
+
+	public long getBal() {
+		return bal;
+	}
+
+	public void setBal(long bal) {
+		this.bal = bal;
+	}
+
+
+}
+
