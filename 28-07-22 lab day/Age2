@@ -1,0 +1,32 @@
+package throw_Exception;
+import java.util.Scanner;
+public class Age2 {
+	static Scanner sc = new Scanner(System.in);	
+	public static void main(String[] args) {
+	Age2 obj=new Age2();
+	obj.aceept();
+	}
+	public void aceept() {
+			
+			System.out.print("Enter your Age : ");
+			int age = sc.nextInt();
+			try {
+				if(age < 18 )
+				{
+					throw new Age_exception2("Invalid Age.");
+				}
+				else
+				{
+					System.out.println("You are valid "+age);
+				}
+			}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
+			
+				
+		
+
+	}
+}
