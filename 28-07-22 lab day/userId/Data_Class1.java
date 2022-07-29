@@ -2,11 +2,12 @@ package throw_Exception;
 import java.util.Scanner;
 
 
-public class Data_Class1 {
-	Scanner sc = new Scanner(System.in);
-	String name,add,ph,s;
-	private String password,user_id;
-
+public class Data_Class1 {//create class
+	Scanner sc = new Scanner(System.in);//scanner
+	String name,add,ph,s;//declared variables and data type is String
+	private String password,user_id;//private varaibles
+public static final int PASSWORD_LENGTH = 8;//decelared lenght of password
+	//create the geter and seter
 	public String getPassword() {
 		return password;
 	}
@@ -19,6 +20,6 @@ public class Data_Class1 {
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
-	public static final int PASSWORD_LENGTH = 8;
+	
 	 
 }
