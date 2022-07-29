@@ -7,7 +7,7 @@ public class Data_Class1 {//create class
 	String name,add,ph,s;//declared variables and data type is String
 	private String password,user_id;//private varaibles
 public static final int PASSWORD_LENGTH = 8;//decelared lenght of password
-	//create the geter and seter
+	//create the geter and seter for private varaibles
 	public String getPassword() {
 		return password;
 	}
