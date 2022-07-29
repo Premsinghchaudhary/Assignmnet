@@ -35,7 +35,7 @@ public class User_details1 extends Variable_define1{//use inhertiance
 			setUser_id(getUser_id());
 			if(getUser_id().length() != 6)//use if condition
 			{
-				throw new user_Exception1("Enter the Valid Id here .");	//use user defined exception
+				throw new user_def_Exception1("Enter the Valid Id here .");	//use user defined exception
 			}
 			else
 			{
@@ -64,7 +64,7 @@ public class User_details1 extends Variable_define1{//use inhertiance
 		            System.out.println("Password is valid: " + s);
 		            printing();//call printing method.....
 		        } else {
-		        	throw new user_Exception1("Not a valid password: ");
+		        	throw new user_def_Exception1("Not a valid password: ");
 		           }
 			}
 			catch(Exception e1)//use catch block for handle the exception
