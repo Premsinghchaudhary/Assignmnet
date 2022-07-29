@@ -1,26 +1,27 @@
 package throw_Exception;
-import java.util.Scanner;
+import java.util.Scanner;//scanner packages....
 public class Age2 {
+        int age;//decalred variable
 	static Scanner sc = new Scanner(System.in);	
-	public static void main(String[] args) {
-	Age2 obj=new Age2();
-	obj.aceept();
+	public static void main(String[] args) {// create main method.....
+	Age2 obj=new Age2();//create object the same class.....
+	obj.aceept();//call the accept method......
 	}
 	public void aceept() {
-			
+			//accept the detail of age from user
 			System.out.print("Enter your Age : ");
-			int age = sc.nextInt();
-			try {
-				if(age < 18 )
+			 age = sc.nextInt();
+			try {//use try block where exception is show
+				if(age < 18 )//use if condition......
 				{
-					throw new Age_exception2("Invalid Age.");
+					throw new Age_exception2("Invalid Age.");//use the user defined exception......
 				}
 				else
 				{
 					System.out.println("You are valid "+age);
 				}
 			}
-			catch(Exception e)
+			catch(Exception e)//use catch block for handle the exception.......
 			{
 				System.out.println(e);
 			}
