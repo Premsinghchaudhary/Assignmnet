@@ -1,0 +1,25 @@
+package throw_Exception;
+import java.util.Scanner;
+
+
+public class Variable_define1 {//create class
+	Scanner sc = new Scanner(System.in);//scanner
+	String name,add,ph,s;//declared variables and data type is String
+	private String password,user_id;//private varaibles
+public static final int PASSWORD_LENGTH = 8;//decelared lenght of password
+	//create the geter and seter for private varaibles
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getUser_id() {
+		return user_id;
+	}
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
+	
+	 
+}
