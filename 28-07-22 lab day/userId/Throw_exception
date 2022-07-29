@@ -9,7 +9,7 @@ A password must contain at least two digits.
 */
 package throw_Exception;
 
-public class Throw_exception1  extends Data_Class1{//use inhertiance
+public class Throw_exception1  extends Variable_define1{//use inhertiance
 	
 	
 	public void details()
