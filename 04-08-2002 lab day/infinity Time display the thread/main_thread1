@@ -1,0 +1,17 @@
+package Thursday_lab;
+
+public class main_thread1 {
+
+	public static void main(String[] args) {
+
+    	Continues_Display_thread1 t1= new Continues_Display_thread1("ACTIVE");//create object1 of same class.....
+    	Continues_Display_thread1 t2= new Continues_Display_thread1("UNACTIVE");//create object2 of same class.....       
+        System.out.println("Threads in running state..........");
+      //call the run method by using start method........
+        t1.start();
+        t2.start();       
+
+	}
+
+}
+//This program in exclips can not be break but using command promt then its break..............
