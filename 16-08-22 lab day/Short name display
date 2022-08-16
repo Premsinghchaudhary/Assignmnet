@@ -23,6 +23,6 @@ mname=sc.next();
 System.out.print("Enter the last name: ");
 lname=sc.next();
 //print the short name for the user...
-System.out.println("Your name : "+""+fname.charAt(0)+"."+mname.charAt(0)+"."+lname);	
+System.out.println("Your name : "+""+fname.toUpperCase().charAt(0)+"."+mname.toUpperCase().charAt(0)+"."+lname);	
 }
 }
