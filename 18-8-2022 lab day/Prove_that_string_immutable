@@ -1,0 +1,39 @@
+//Write a program to prove that string is immutable .
+package Thursday_lab;
+import java.util.Scanner;
+public class Prove_that_string_immutable {
+Scanner sc=new Scanner(System.in);//scanner
+String s1,s2,s3;//variable declartion......
+    public static void main(String[] args)//main method........
+    {
+    	Prove_that_string_immutable  obj=new Prove_that_string_immutable ();
+    	obj.immutalbe();//call the method........
+    }
+    public  void immutalbe() //create the method........
+    {
+    	System.out.print("Enter the first String:");//get input from user..........
+    	s1=sc.nextLine();
+    	System.out.print("Enter the second String:");//get input from user..........
+    	s2=sc.nextLine();
+    	System.out.print("Before changing the  String: "+"s1= "+s1+" ,"+ "s2 = "+s2);
+    	
+    	System.out.println(" \n Enter the string s1 to change:");
+    	s3=sc.nextLine();
+    	s1 +=s3;
+
+    	System.out.println(" \n Enter the string s2 to change:");
+    	s3=sc.nextLine();
+    	s2 +=s3;
+    	System.out.print("After changing : "+"s1= "+s1+" ,"+ "s2 = "+s2);
+         check(s1,s2);  
+         
+    }
+    public static void check(String a,String b) {
+    	  if (a == b) {  
+              System.out.println("\n Mutable");  
+     
+          } else {  
+              System.out.println("\n Immutable");  
+          }  
+    }
+ }
