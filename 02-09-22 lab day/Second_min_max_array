@@ -1,0 +1,43 @@
+/*Write a program to find second minimum and second maximum number from the array .*/
+package Thursday_lab;
+
+import java.util.Scanner;
+
+public class Second_min_max_array {
+	int n, temp,i,j;//varaible declartion...
+    Scanner s = new Scanner(System.in);//using scanner.......
+	
+	 public static void main(String[] args) //main method..........
+	    {//create the object of class.......
+		 Second_min_max_array obj=new Second_min_max_array ();
+		 obj.max_min();//call the method.
+		 
+	    }
+	        public void max_min() {//create the method
+	        	//get the input from user......
+	        System.out.print("Enter the size of array:");
+	        n = s.nextInt();
+	        int arr[] = new int[n];
+	        System.out.println("Enter all the elements:");
+	        for ( i = 0; i < n; i++) 
+	        {
+	            arr[i] = s.nextInt();
+	        }
+	        //calculate the max min number....
+	        for ( i = 0; i < n; i++) 
+	        {
+	            for (j = i + 1; j < n; j++) 
+	            {
+	                if (arr[i] > arr[j]) //using condition....
+	                {//swapping to calculate the the max or min number with third variable ....
+	                    temp = arr[i];
+	                    arr[i] = arr[j];
+	                    arr[j] = temp;
+	                }
+	            }
+	        }//simply print the maximum no and minimum no........
+	        System.out.println("Second Largest no:"+arr[n-2]);
+	        System.out.println("Second Smallest no:"+arr[1]);
+	    }
+	}
+
