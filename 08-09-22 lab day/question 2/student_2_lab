@@ -7,13 +7,15 @@ package Collection;
 
 public class student_2_lab
 {
-        private String name;
+//create a private variable ...........
+        private String name; 
         private int regNumber;
-        public student_2_lab(String n, int reg)
+        public student_2_lab(String n, int reg)//create the construtor..........
         {
-                this.name = n;
+                this.name = n;// using the this keyword.......
                 this.regNumber = reg;
         }
+        // using the geter and seter for use the private varaible...........
         public String getName()
         {
                 return name;
