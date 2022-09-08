@@ -14,24 +14,24 @@ package Collection;
 	public class Linkedlist_3_lab {
 		 public <T> List<T> union(List<T> list1, List<T> list2)
 	     {
-	          Set<T> set = new HashSet<T>();
-	          set.addAll(list1);
+	          Set<T> set = new HashSet<T>(); //create the hashset ........
+	          set.addAll(list1); //add the data......
 	          set.addAll(list2);
 	          return new LinkedList<T>(set);
 	     }
 	     public <T> List<T> intersection(List<T> list1, List<T> list2)
 	     {
-	          List<T> list = new LinkedList<T>();
-	          for (T t : list1)
+	          List<T> list = new LinkedList<T>();//create the linkedlist.........
+	          for (T t : list1)//using the for loop.....
 	          {
-	               if(list2.contains(t))
+	               if(list2.contains(t))//using the condition.........
 	               {
 	                    list.add(t);
 	               }
 	          }
 	          return list;
 	     }
-	     public static void main(String... args) throws Exception
+	     public static void main(String... args) throws Exception//main method it is a deriver..............
 	     {
 	          List<String> list1 = new LinkedList<String>(Arrays.asList("A", "B", "C"));
 	          List<String> list2 = new LinkedList<String>(Arrays.asList("B", "C", "D", "E", "F"));
