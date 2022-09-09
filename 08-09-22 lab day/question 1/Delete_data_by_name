@@ -1,79 +1,103 @@
-0/*write a program to accept name, Email, Phone Number, Percentage from the user and store the data using arraylist.
+
+/* write a program to accept name, Email, Phone Number, Percentage from the user and store the data using arraylist.
 Accept name from the user and remove all the data from the list and display the output. 
 and also perform the searching operation with the help of the name.
 */
 package Collection;
-
-import java.util.ArrayList;   
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Delete_data_by_name {
-                  //declared variable...........
-String name,email,ph,n1;          
-double per;                                         
-int size,i,j,k;
-Scanner sc=new Scanner(System.in);//scanner ........
-	public static void main(String args[]) {   //main method ............
-		Delete_data_by_name ob=new Delete_data_by_name();//create the object the for calling the method.............
-		ob.aceept_and_stored();//calling the methd=od...........
-	        ob.delete_data_by_name();
-	
-	}
-	//public void arraylist() {
+		String name,email,n1,ph;                         // variable declaration in String type.........
+		double per;                                      //variable decalration in double type......
+		int size,i,j,k,m,n,temp;                         //variable declaration in interger type......
+		Scanner sc=new Scanner(System.in);                 //scanner .......
+		ArrayList<String> al=new ArrayList<>(size);	   //ArrayList1...................
+		ArrayList<String> al1=new ArrayList<>(size);       //ArrayList2.............
+		ArrayList<String> al2=new ArrayList<>(size);       //ArrayList3.............
+		ArrayList<Double> al3=new ArrayList<>(size);       //ArrayList4.............
 		
-	//}
-	public void aceept_and_stored() {//create the method..............
-		System.out.print("Enter the number of data:");//get the data from user.......
-		size=sc.nextInt();
-		for(k=0;k<size;k++) {//using the for loop...........
-                                // accept the data from the user..........
-			System.out.print("\tEnter the Details:");
-			System.out.print("\nEnter your name:");
-			name=sc.next();		
-			System.out.print("Enter your E-mail:");
-			email=sc.next();		
-			System.out.print("Enter your Phone no:");
-			ph=sc.next();		
-			System.out.print("Enter your Percentage :");
-			per=sc.nextDouble();	
-		
-		ArrayList<String> al=new ArrayList<>(size);	//ArrayList1...................
-		ArrayList<Double> al1=new ArrayList<>(size);//ArrayList2...................
-		al.add(name);
-		al.add(ph);
-		al.add(email);
-		al1.add(per);
-		System.out.println("\tDetails of "+name);
-      for (i=0; i<al.size(); i++) {//using for loop.........
-      String curr = al.get(i);
-      System.out.println(curr);
-
-      }
-      for(j=0;j<al1.size();j++) {
-		Double d=al1.get(j);
-		System.out.println(d);
-	}
-      
-	
-
+		  
+		public static void main(String args[])          // main method....
+		{
+			Delete_data_by_name ob=new Delete_data_by_name(); //create the object for calling the methods......
+		    ob.aceept_and_stored();
+		    ob.delete_data_by_name();
+			
 		}
+		public void aceept_and_stored()       //create the method for aceept the data from user........
+		{
+				System.out.print("Enter the number of data:");  //get input from user .
+				size=sc.nextInt();    //stored the size .....
+				for(k=0;k<size;k++) { //using for loop..
+
+					System.out.print("Enter the Details:");         
+					System.out.print("\nEnter your name:");     //get the name from user.......
+					name=sc.next();		
+					System.out.print("Enter your E-mail:");      //get the email from user.......
+					email=sc.next();		
+					System.out.print("Enter your Phone no:");    //get the phone from user.......
+					ph=sc.next();	
+					System.out.print("Enter your Percentage :");  //get the Percent from user.......
+					per=sc.nextDouble();	
+				
+				al.add(name);    //stored the data in arraylist.........
+				al1.add(email);
+				al2.add(ph);
+				al3.add(per);
+				System.out.println("Details of :"+name);
+		      for (i=0; i<al.size(); i++)   //using the for loop......
+		      {
+		    	  String curr = al.get(i);
+		          System.out.println(curr);
+
+		      }
+		      for(j=0;j<al1.size();j++)   //using the for loop......
+		      {
+		    	  String curr1=al1.get(j);
+			      System.out.println(curr1);
+		      }
+		      for(m=0;m<al2.size();m++)   //using the for loop......
+		      {
+			      String  curr2=al2.get(m);
+			      System.out.println(curr2);
+		      }
+		      for(n=0;n<al3.size();n++)   //using the for loop......
+		      {
+			      double curr3=al3.get(n);
+			      System.out.println(curr3);
+		      }
+		      
+		      System.out.print("==============***======================***===================");
+		  }
 		
 	}
+	public void delete_data_by_name() 
+		{
+			System.out.println("\tDelete the data by name:");  
+			System.out.println("Enter the name:");           //aceept  the name from user for delete the data 
+			name=sc.next();
+			if(al.contains(name))                          //using condition for delete the data.
+			{
+				System.out.println("Index:"+al.indexOf(name));
+				temp=al.indexOf(name);
+				al.remove(temp);
+				al1.remove(temp);
+				al2.remove(temp);
+				al3.remove(temp);
+				System.out.println("Your data is successfully deleted......!");
+				
+			}
+			else
+			{
+				System.out.println("Does'nt find tha data! please try again......!");
+			}
+			
+			System.out.println("Name="+al);
+			System.out.println("E-mail id="+al1);
+			System.out.println("Phone no="+al2);
+			System.out.println("Percent="+al3);
+				
+			}				
 
-	public void delete_data_by_name() {//create the method from the delete.......
-		//get the data from user.......
-		System.out.println("\tDelete for the data by name:");
-		System.out.println("Enter the name:");
-	      name=sc.next();
-	      System.out.println(al.contains(al));
-
-	if(n1==name) {//using condition...........
-		al.clear();//using the clear the method for delete the data.........
-		System.out.println("Your data is deleted. ");
-	}
-	else {
-		System.out.println("Does'nt find tha data! please try again");
-	}		
-	}
-	
 }
